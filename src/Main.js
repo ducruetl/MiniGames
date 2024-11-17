@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './style.css';
 
+// Verify each row, column and diagonals to see if one of them contains only "X" or "O", if it is the case, return the value that fills the line.
 function calculateWinner(squares) {
   const lines = [
     [0, 1, 2],
@@ -24,6 +25,7 @@ function calculateWinner(squares) {
 
 }
 
+// A square component of the board, it can contains the values "X", "O" or "". 
 function Square({value, onSquareClick}) {
   return (
     <button className='square' onClick={onSquareClick}>
@@ -32,6 +34,7 @@ function Square({value, onSquareClick}) {
   );
 }
 
+// The game board of the tic-tac-toe game, contains 9 squares
 function GameBoard() {
   const [squares, setSquares] = useState(Array(9).fill(null));
   const [xIsNext, setXIsNext] = useState(true);
@@ -44,13 +47,16 @@ function GameBoard() {
     gameStatus = "Prochain tour : " + (xIsNext ? "X" : "O");
   }
 
+  // This function is triggered when a square is clicked
   function handleClick(squareNum) {
     const copySquares = squares.slice();
 
+    // If there is already a winner, or if the square already contains a not null value, the function does nothing.
     if (winner != null || squares[squareNum] != null) {
       return;
     }
 
+    // Determine which value to give to the square depending on the round.
     if (xIsNext) {
       copySquares[squareNum] = "X";
       setXIsNext(false);
