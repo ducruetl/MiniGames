@@ -15,7 +15,7 @@ function calculateWinner(squares) {
 
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i];
-    if (squares[line[0]] && squares[line[0]] == squares[line[1]] && squares[line[1]] == squares[line[2]]) {
+    if (squares[line[0]] && squares[line[0]] === squares[line[1]] && squares[line[1]] === squares[line[2]]) {
       return squares[line[0]];
     }
   }
