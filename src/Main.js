@@ -1,6 +1,16 @@
 import { useState } from 'react';
 import './style.css';
 
+// Return true if all the squares are filled, return false if at least one square is null
+function isBoardFull(squares) {
+	for (let i = 0; i < squares.length; i++) {
+		if (!squares[i]) {
+			return false;
+		}	
+	}
+	return true;
+}
+
 // Verify each row, column and diagonals to see if one of them contains only "X" or "O", if it is the case, return the value that fills the line.
 function calculateWinner(squares) {
   const lines = [
@@ -42,9 +52,11 @@ function GameBoard() {
   let gameStatus;
 
   if (winner != null) {
-    gameStatus = winner + " a gagné";
-  } else {
-    gameStatus = "Prochain tour : " + (xIsNext ? "X" : "O");
+    gameStatus = winner + " has won!";
+  } else if (isBoardFull) {
+		gameStatus = "Draw";
+	} else {
+    gameStatus = "Next turn : " + (xIsNext ? "X" : "O");
   }
 
   // This function is triggered when a square is clicked
