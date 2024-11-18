@@ -4,7 +4,7 @@ import './style.css';
 // Return true if all the squares are filled, return false if at least one square is null
 function isBoardFull(squares) {
 	for (let i = 0; i < squares.length; i++) {
-		if (squares[i] === null) {
+		if (!squares[i]) {
 			return false;
 		}	
 	}
@@ -53,7 +53,7 @@ function GameBoard() {
 
   if (winner != null) {
     gameStatus = winner + " has won!";
-  } else if (isBoardFull) {
+  } else if (isBoardFull(squares)) {
 		gameStatus = "Draw";
 	} else {
     gameStatus = "Next turn : " + (xIsNext ? "X" : "O");
