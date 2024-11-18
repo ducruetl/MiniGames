@@ -7,7 +7,7 @@ import {
 
 import './style.css';
 import Root from './routes/root';
-import Main from './Main';
+import TicTacToe from './routes/tic-tac-toe';
 import ErrorPage from './error-page';
 
 const router = createBrowserRouter([
@@ -15,7 +15,11 @@ const router = createBrowserRouter([
     path: "/",
     element: <Root/>,
 		errorElement: <ErrorPage/>,
-  },
+	},	
+	{
+		path: "/tic-tac-toe",
+		element: <TicTacToe/>,	
+	},
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

@@ -29,9 +29,25 @@ code {
     monospace;
 }
 
-/* Main.jsx */
+/* tic-tac-toe.jsx */
+
+.game {
+	margin-left: 4vw;
+	height: 40vh;
+	width: 20vw;
+	border: solid 2px white;
+}
 
 .main {
+	text-align: center;
+  background-color: #282c34;
+  min-height: 90vh;
+  display: flex;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.mainGame {
   text-align: center;
   background-color: #282c34;
   min-height: 90vh;

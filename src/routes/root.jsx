@@ -8,7 +8,18 @@ export default function Root() {
         <hr/>
       </div>
       <div className='main'>
-       	 
+				<a className='game' href='/tic-tac-toe'>
+					Tic Tac Toe
+				</a>
+				<div className='game'>
+					Under development
+				</div>
+				<div className='game'>
+					Under development	
+				</div>
+				<div className='game'>
+					Under development
+				</div>
       </div>
     </>
   );

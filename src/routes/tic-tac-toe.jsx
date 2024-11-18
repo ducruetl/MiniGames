@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './style.css';
+import '../style.css';
 
 // Return true if all the squares are filled, return false if at least one square is null
 function isBoardFull(squares) {
@@ -102,18 +102,18 @@ function GameBoard() {
   );
 }
 
-function Main() {
+function TicTacToe() {
   return (
     <>
       <div className='header'>
         <h1>Mini Games</h1>
         <hr/>
       </div>
-      <div className='main'>
+      <div className='mainGame'>
         <GameBoard/>
       </div>
     </>
   );
 }
 
-export default Main;
+export default TicTacToe;
