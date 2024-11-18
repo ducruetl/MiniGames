@@ -13,7 +13,7 @@
 	color: gray;
 }
 
-/* index.jsx */
+/* All */
 
 body {
   margin: 0;
@@ -27,6 +27,11 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.link {
+	text-decoration: none;
+	color: white;
 }
 
 /* tic-tac-toe.jsx */

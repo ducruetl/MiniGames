@@ -1,16 +1,24 @@
+import { Link } from 'react-router-dom';
+
 import '../style.css';
 
 export default function Root() {
 	return (
     <>
       <div className='header'>
-        <h1>Mini Games</h1>
+        <h1>
+					<Link to={'/'} className='link'>
+						Mini Games
+					</Link>
+				</h1>
         <hr/>
       </div>
       <div className='main'>
-				<a className='game' href='/tic-tac-toe'>
-					Tic Tac Toe
-				</a>
+				<Link to={'tic-tac-toe'} className='link'>
+					<div className='game'>
+						Tic Tac Toe
+					</div>
+				</Link>
 				<div className='game'>
 					Under development
 				</div>

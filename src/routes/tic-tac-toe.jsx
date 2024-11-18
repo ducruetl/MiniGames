@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import '../style.css';
 
 // Return true if all the squares are filled, return false if at least one square is null
@@ -106,7 +107,11 @@ function TicTacToe() {
   return (
     <>
       <div className='header'>
-        <h1>Mini Games</h1>
+        <h1>
+					<Link to={'/'} className='link'>
+						Mini Games
+					</Link>
+				</h1>
         <hr/>
       </div>
       <div className='mainGame'>
