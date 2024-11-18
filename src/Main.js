@@ -4,7 +4,7 @@ import './style.css';
 // Return true if all the squares are filled, return false if at least one square is null
 function isBoardFull(squares) {
 	for (let i = 0; i < squares.length; i++) {
-		if (!squares[i]) {
+		if (squares[i] === null) {
 			return false;
 		}	
 	}
