@@ -1,4 +1,19 @@
-/* index.js */
+/* error-page.jsx */
+
+#error-page {
+	margin-top: 40vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+#error-page i {
+	color: gray;
+}
+
+/* index.jsx */
 
 body {
   margin: 0;
@@ -14,7 +29,7 @@ code {
     monospace;
 }
 
-/* Main.js */
+/* Main.jsx */
 
 .main {
   text-align: center;
