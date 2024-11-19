@@ -5,10 +5,11 @@ import {
 	RouterProvider,
 } from 'react-router-dom';
 
-import './style.css';
+import './styles/style.css';
 import Root from './routes/root';
 import TicTacToe from './routes/tic-tac-toe';
 import ErrorPage from './error-page';
+import ConnectFour from './routes/connect-four';
 
 const router = createBrowserRouter([
   {
@@ -17,8 +18,12 @@ const router = createBrowserRouter([
 		errorElement: <ErrorPage/>,
 	},	
 	{
-		path: "/tic-tac-toe",
+		path: "/games/tic-tac-toe",
 		element: <TicTacToe/>,	
+	},
+	{
+		path: "/games/connect-four",
+		element: <ConnectFour/>,
 	},
 ]);
 

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-import '../style.css';
+import '../styles/style.css';
 
 export default function Root() {
 	return (
@@ -14,13 +14,17 @@ export default function Root() {
         <hr/>
       </div>
       <div className='main'>
-				<Link to={'tic-tac-toe'} className='link'>
-					<div className='game'>
-						Tic Tac Toe
-					</div>
-				</Link>
 				<div className='game'>
-					Under development
+					<Link to={'games/tic-tac-toe'} className='link'>
+						Tic Tac Toe
+						<img src='tic-tac-toe.png'/>
+					</Link>
+				</div>
+			
+				<div className='game'>
+					<Link to={'games/connect-four'} className='link'>
+						Connect 4	
+					</Link>
 				</div>
 				<div className='game'>
 					Under development	

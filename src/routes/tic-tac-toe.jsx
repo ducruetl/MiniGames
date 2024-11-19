@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import '../style.css';
+import '../styles/tic-tac-toe.css';
 
 // Return true if all the squares are filled, return false if at least one square is null
 function isBoardFull(squares) {
