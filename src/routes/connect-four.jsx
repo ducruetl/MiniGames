@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 import '../styles/connect-four.css';
 
 function Circle({value, onCoinClick}) {
-	if (value == 'red') {
+	if (value === 'red') {
 		return <button className='redCoin' onClick={onCoinClick}/>;
 	}
-	if (value == 'yellow') {
+	if (value === 'yellow') {
 		return <button className='yellowCoin' onClick={onCoinClick}/>;
 	}
 	return <button className='coin' onClick={onCoinClick}/>;
@@ -19,28 +19,28 @@ function calculateWinner(coinColors ,coinNumber) {
 
 	if (coinNumber % 6 >= 3) {
 		while (i < 4) {
-			if (coinColors[coinNumber - i] == color) {
+			if (coinColors[coinNumber - i] === color) {
 				cpt++;
 			} else {
 				i = 4;
 			}
 			i++;
 		}
-		if (cpt == 4) {
+		if (cpt === 4) {
 			return true;
 		}
 		i = 1;
 		cpt = 1;
 	} else {
 		while (i < 4) {
-			if (coinColors[coinNumber + i] == color) {
+			if (coinColors[coinNumber + i] === color) {
 				cpt++;
 			} else {
 				i = 4;
 			}
 			i++;
 		}
-		if (cpt == 4) {
+		if (cpt === 4) {
 			return true;
 		}
 		i = 1;
@@ -49,14 +49,14 @@ function calculateWinner(coinColors ,coinNumber) {
 
 	if (coinNumber + 18 <= 41) {
 		while (i < 4) {
-			if (coinColors[coinNumber + i*6] == color) {
+			if (coinColors[coinNumber + i*6] === color) {
 				cpt++;
 			} else {
 				i = 4;
 			}
 			i++;
 		}
-		if (cpt == 4) {
+		if (cpt === 4) {
 			return true;
 		}
 		i = 1;
@@ -64,28 +64,28 @@ function calculateWinner(coinColors ,coinNumber) {
 
 		if (coinNumber % 6 >= 3) {
 			while (i < 4) {
-				if (coinColors[coinNumber - i + i*6] == color) {
+				if (coinColors[coinNumber - i + i*6] === color) {
 					cpt++;
 				} else {
 					i = 4;
 				}
 				i++;
 			}
-			if (cpt == 4) {
+			if (cpt === 4) {
 				return true;
 			}
 			i = 1;
 			cpt = 1;
 		} else {
 			while (i < 4) {
-				if (coinColors[coinNumber + i + i*6] == color) {
+				if (coinColors[coinNumber + i + i*6] === color) {
 					cpt++;
 				} else {
 					i = 4;
 				}
 				i++;
 			}
-			if (cpt == 4) {
+			if (cpt === 4) {
 				return true;
 			}
 			i = 1;
@@ -96,14 +96,14 @@ function calculateWinner(coinColors ,coinNumber) {
 
 	if (coinNumber - 18 >= 0) {
 		while (i < 4) {
-			if (coinColors[coinNumber - i*6] == color) {
+			if (coinColors[coinNumber - i*6] === color) {
 				cpt++;
 			} else {
 				i = 4;
 			}
 			i++;
 		}
-		if (cpt == 4) {
+		if (cpt === 4) {
 			return true;
 		}
 		i = 1;
@@ -111,28 +111,28 @@ function calculateWinner(coinColors ,coinNumber) {
 
 		if (coinNumber % 6 >= 3) {
 			while (i < 4) {
-				if (coinColors[coinNumber - i - i*6] == color) {
+				if (coinColors[coinNumber - i - i*6] === color) {
 					cpt++;
 				} else {
 					i = 4;
 				}
 				i++;
 			}
-			if (cpt == 4) {
+			if (cpt === 4) {
 				return true;
 			}
 			i = 1;
 			cpt = 1;
 		} else {
 			while (i < 4) {
-				if (coinColors[coinNumber + i - i*6] == color) {
+				if (coinColors[coinNumber + i - i*6] === color) {
 					cpt++;
 				} else {
 					i = 4;
 				}
 				i++;
 			}
-			if (cpt == 4) {
+			if (cpt === 4) {
 				return true;
 			}
 			
@@ -162,7 +162,7 @@ function GameBoard() {
 			return;	
 		}
 
-		if (coinNumber % 6 == 0) {
+		if (coinNumber % 6 === 0) {
 			coinNumber++;	
 		}
 		const startingCoin = (Math.ceil(coinNumber/6) * 6) - 1;

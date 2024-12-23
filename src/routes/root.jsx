@@ -17,7 +17,7 @@ export default function Root() {
 				<div className='game'>
 					<Link to={'games/tic-tac-toe'} className='link'>
 						Tic Tac Toe
-						<img src='tic-tac-toe.png'/>
+						<img src='tic-tac-toe.png' alt='Game tic-tac-toe preview'/>
 					</Link>
 				</div>
 			
